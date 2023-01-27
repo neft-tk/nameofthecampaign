@@ -11,6 +11,15 @@ const API = {
             },
         });
         return await res.json();
+    },
+    getUsersFromToken: async (token) => {
+        const res = await fetch(`${URL_PREFIX}/api/users/readtoken`, {
+            method: 'GET',
+            headers: {
+                Authorization: `Bearer ${token}`
+            },
+        });
+        return await res.json()
     }
 }
 
