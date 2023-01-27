@@ -1,0 +1,13 @@
+html {
+    min-height: 100vh;
+    min-width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
+    font-family: 'League Spartan', sans-serif;
+    background-image: linear-gradient(to bottom, #720000, #bd5427, #af4702, black);
+
+}
+
+body {
+    background-color: transparent;
+}
