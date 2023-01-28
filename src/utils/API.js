@@ -34,6 +34,16 @@ const API = {
             },
         });
         return await res.json()
+    },
+    createPost: async (postData) => {
+        const res = await fetch(`${URL_PREFIX}/api/posts/`, {
+            method: 'POST',
+            body: JSON.stringify(postData),
+            headers: {
+                'Content-Type': 'Application/json',
+            },
+        });
+        return await res.json()
     }
 }
 

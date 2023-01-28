@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Nav() {
   return (
       <div className="navbar-main">
-        <Link to="/home">
+        <Link to="/">
             <h2>Home</h2>
         </Link>
         <Link to="/admin">
