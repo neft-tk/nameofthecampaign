@@ -7,9 +7,9 @@ const postEl = document.querySelector("#post-text")
 
 export default function PostForm() {
 
-    async function createPost(postObj) {
-        await console.log(postObj)
+    async function newPost(postObj) {
         await API.createPost(postObj)
+        console.log(postObj);        
     }
 
     async function sendPost(e) {
@@ -19,18 +19,20 @@ export default function PostForm() {
           .sendForm("service_eoyq1w5", "template_tobhppj", e.target, "3eJvPeASOvZx1u5Cr")
           .then(
             (result) => {
-              window.location.reload(); //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
+              // window.location.reload(); //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior)
             },
             (error) => {
               console.log(error.text);
             }
           );
 
-          createPost({
+          newPost({
             title: titleEl.value,
             text: postEl.value,
             userId: 1,
           })
+
+          window.location.reload();
       }
 
 
