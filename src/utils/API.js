@@ -44,6 +44,15 @@ const API = {
             },
         });
         return await res.json()
+    },
+    getAllPosts: async () => {
+        const res = await fetch(`${URL_PREFIX}/api/posts`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'Application/json',
+            },
+        });
+        return await res.json();
     }
 }
 

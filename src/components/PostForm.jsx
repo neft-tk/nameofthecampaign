@@ -8,8 +8,7 @@ const postEl = document.querySelector("#post-text")
 export default function PostForm() {
 
     async function createPost(postObj) {
-        await console.log(postObj);
-        
+        await console.log(postObj)
         await API.createPost(postObj)
     }
 
@@ -38,8 +37,6 @@ export default function PostForm() {
     return (
           <form className="contact-form" onSubmit={sendPost}>
       <input type="hidden" name="contact_number" />
-      <label>Name</label>
-      <input type="text" name="from_name" />
       <label>Title/Subject</label>
       <input type="text" name="subject" id="subject"/>
       <label>Message</label>
